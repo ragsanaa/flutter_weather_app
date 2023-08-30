@@ -235,81 +235,88 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Column(
-                                  children: [
-                                    Icon(Symbols.humidity_percentage,
-                                        color: Colors.white, size: 30),
-                                    const SizedBox(height: 10),
-                                    Text(
-                                      '${weather.main!.humidity!.toString()}%',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
+                                Expanded(
+                                  child: Column(
+                                    children: [
+                                      Icon(Symbols.humidity_percentage,
+                                          color: Colors.white, size: 30),
+                                      const SizedBox(height: 10),
+                                      Text(
+                                        '${weather.main!.humidity!.toString()}%',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                        ),
                                       ),
-                                    ),
-                                    const SizedBox(height: 5),
-                                    Text(
-                                      termTranslations['humidity']![
-                                              selectedValue] ??
-                                          'Humidity',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.white,
+                                      const SizedBox(height: 5),
+                                      Text(
+                                        termTranslations['humidity']![
+                                                selectedValue] ??
+                                            'Humidity',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.white,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                                Column(
-                                  children: [
-                                    Icon(Symbols.visibility,
-                                        color: Colors.white, size: 30),
-                                    const SizedBox(height: 10),
-                                    Text(
-                                      '${(weather.visibility! / 1000).toStringAsFixed(1)} km',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
+                                Expanded(
+                                  child: Column(
+                                    children: [
+                                      Icon(Symbols.visibility,
+                                          color: Colors.white, size: 30),
+                                      const SizedBox(height: 10),
+                                      Text(
+                                        '${(weather.visibility! / 1000).toStringAsFixed(1)} km',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                        ),
                                       ),
-                                    ),
-                                    const SizedBox(height: 5),
-                                    Text(
-                                      termTranslations['visibility']![
-                                              selectedValue] ??
-                                          'Visibility',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.white,
+                                      const SizedBox(height: 5),
+                                      Text(
+                                        termTranslations['visibility']![
+                                                selectedValue] ??
+                                            'Visibility',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.white,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                                Column(
-                                  children: [
-                                    Icon(Symbols.air,
-                                        color: Colors.white, size: 30),
-                                    const SizedBox(height: 10),
-                                    Text(
-                                      '${(weather.wind!.speed! * 3.6).toStringAsFixed(1)} km/h',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
+                                Expanded(
+                                  child: Column(
+                                    children: [
+                                      Icon(Symbols.air,
+                                          color: Colors.white, size: 30),
+                                      const SizedBox(height: 10),
+                                      Text(
+                                        '${(weather.wind!.speed! * 3.6).toStringAsFixed(1)} km/h',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
-                                    ),
-                                    const SizedBox(height: 5),
-                                    Text(
-                                      termTranslations['wind']![
-                                              selectedValue] ??
-                                          'Wind',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.white,
+                                      const SizedBox(height: 5),
+                                      Text(
+                                        termTranslations['wind']![
+                                                selectedValue] ??
+                                            'Wind',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.white,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
